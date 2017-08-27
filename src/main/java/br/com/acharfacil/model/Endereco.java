@@ -22,8 +22,6 @@ public class Endereco implements Serializable {
 
 	private String codigoPostal;
 
-	private Funcionario funcionario;
-
 	public Endereco() {
 	}
 
@@ -57,14 +55,6 @@ public class Endereco implements Serializable {
 
 	public void setCodigoPostal(String codigoPostal) {
 		this.codigoPostal = codigoPostal;
-	}
-
-	public Funcionario getFuncionario() {
-		return funcionario;
-	}
-
-	public void setFuncionario(Funcionario funcionario) {
-		this.funcionario = funcionario;
 	}
 
 }

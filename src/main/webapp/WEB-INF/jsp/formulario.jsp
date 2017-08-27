@@ -13,11 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ProjetoPessoal</title>
-	<link rel="stylesheet" type="text/css" href="/AcharFacil/css/estilo.css">
-	<link rel="stylesheet" type="text/css" href="/AcharFacil/css/bootstrap.css">
-	<script src="/AcharFacil/js/bootstrap.js"></script>
-	<script src="/AcharFacil/js/jquery.js"></script>
-	<script src="/AcharFacil/js/scripts.js"></script>
+	<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloFormularioCadastro.css">
+	<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
+	<script src="/AcharFacil/resources/js/bootstrap.js"></script>
+	<script src="/AcharFacil/resources/js/jquery.js"></script>
+	<script src="/AcharFacil/resources/js/scripts.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -123,7 +123,33 @@
 							</span> 
 							<select name="estado" class="form-control selectpicker">
 								<option value=" ">Selecione seu estado</option>
-								<!-- falta lista -->
+								<option value="Rio Branco">Rio Branco</option>			
+								<option value="Alagoas">Alagoas</option>					
+								<option value="Amapá">Amapá</option>					
+								<option value="Amazonas">Amazonas</option>				
+								<option value="Bahia">Bahia</option>					
+								<option value="Ceará">Ceará</option>				
+								<option value="Distrito Federal	">Distrito Federal</option>		
+								<option value="Espírito Santo">Espírito Santo</option>			
+								<option value="Goiás">Goiás</option>				
+								<option value="Maranhão	">Maranhão</option>				
+								<option value="Mato Grosso	">Mato Grosso</option>				
+								<option value="Mato Grosso do Sul">Mato Grosso do Sul</option>		
+								<option value="Minas Gerais	">Minas Gerais</option>			
+								<option value="Paraná">Paraná</option>					
+								<option value="Paraíba">Paraíba</option>					
+								<option value="Pará	">Pará</option>					
+								<option value="Pernambuco">Pernambuco</option>				
+								<option value="Piauí">Piauí</option>					
+								<option value="Rio de Janeiro">Rio de Janeiro</option>			
+								<option value="Rio Grande do Norte">Rio Grande do Norte</option>	
+								<option value="Rio Grande do Sul">Rio Grande do Sul</option>		
+								<option value="Rondônia		">Rondônia</option>				
+								<option value="Roraima">Roraima</option>					
+								<option value="Santa Catarina">Santa Catarina</option>			
+								<option value="Sergipe">Sergipe</option>					
+								<option value="São Paulo">São Paulo</option>				
+								<option value="Tocantins">Tocantins</option>
 							</select>
 						</div>
 					</div>
@@ -142,37 +168,58 @@
 						</div>
 					</div>
 				</div>
-
-				<!-- radio checks
+				
+				<!-- Text input-->
 				<div class="form-group">
-					<label class="col-md-4 control-label">Do you have hosting?</label>
-					<div class="col-md-4">
-						<div class="radio">
-							<label> <input type="radio" name="hosting" value="yes" />
-								Yes
-							</label>
-						</div>
-						<div class="radio">
-							<label> <input type="radio" name="hosting" value="no" />
-								No
-							</label>
-						</div>
-					</div>
-				</div>  -->
-
-				<!-- Text area 
-
-				<div class="form-group">
-					<label class="col-md-4 control-label">Sobre você</label>
+					<label class="col-md-4 control-label">Login</label>
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon">
-								<i class="glyphicon glyphicon-pencil"></i>
+								<i class="glyphicon glyphicon-home"></i>
 							</span>
-							<textarea class="form-control" name="comment" placeholder="Sobre você"></textarea>
+							<input name="usuario"  class="form-control" type="text">
 						</div>
 					</div>
-				</div> -->
+				</div>
+				
+					<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Senha</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-home"></i>
+							</span>
+							<input name="senha"  class="form-control" type="text">
+						</div>
+					</div>
+				</div>
+				
+					<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Repetir senha</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-home"></i>
+							</span>
+							<input name="repetirSenha"  class="form-control" type="text">
+						</div>
+					</div>
+				</div>
+				
+				<!-- Text input-->
+				<div class="form-group">
+					<label class="col-md-4 control-label">Codigo Postal</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-home"></i>
+							</span>
+							<input name="codigoPostal" placeholder="99999-999" class="form-control" type="text">
+						</div>
+					</div>
+				</div>
 
 				<!-- Success message -->
 				<div class="alert alert-success" role="alert" id="success_message">

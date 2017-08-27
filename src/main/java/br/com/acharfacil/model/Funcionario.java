@@ -16,7 +16,7 @@ public class Funcionario implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idFuncionario;
 
 	private String nome;
@@ -32,8 +32,12 @@ public class Funcionario implements Serializable {
 	private String sobreVoce;
 
 	@OneToOne(cascade = CascadeType.ALL, optional = true)
-	@JoinColumn(name = "endereco_id") 
+	@JoinColumn(name = "endereco_id")
 	private Endereco endereco;
+
+	@OneToOne(cascade = CascadeType.ALL, optional = true)
+	@JoinColumn(name = "login_id")
+	private Login login;
 
 	public Funcionario() {
 	}
@@ -100,6 +104,14 @@ public class Funcionario implements Serializable {
 
 	public void setSobreVoce(String sobreVoce) {
 		this.sobreVoce = sobreVoce;
+	}
+
+	public Login getLogin() {
+		return login;
+	}
+
+	public void setLogin(Login login) {
+		this.login = login;
 	}
 
 }

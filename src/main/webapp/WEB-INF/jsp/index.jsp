@@ -16,19 +16,54 @@
 	
 		<title>ProjetoPessoal</title>
 	
-		<link rel="stylesheet" type="text/css" href="<c:url value="/css/estilo.css"/>">
-		<link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap.css"/>">
-		<script src="<c:url value="/js/bootstrap.js"/>"></script>
-		<script src="<c:url value="/js/jquery.js"/>"></script>
-		<script src="<c:url value="/js/scripts.js"/>"></script>
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloLogin.css">
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
+		<script src="/AcharFacil/resources/js/bootstrap.js"></script>
+		<script src="/AcharFacil/resources/js/jquery.js"></script>
+		<script src="/AcharFacil/resources/js/scripts.js"></script>
 		
 	</head>
 	<body>
-	
-	
-         <form action="formulario" method="get">
-	 		<p>Sejam bem vindos ao melhor programa para busca de trabalho</p>
-			<button type="submit">Se cadastrar</button>	
-		</form>
+		<div class="container">
+		  <div class="row">
+		
+		    <div class="main">
+		
+		      <h3>Faça o login, ou <a href="#">Inscrever-se</a></h3>
+		      <div class="row">
+		        <div class="col-xs-6 col-sm-6 col-md-6">
+		          <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
+		        </div>
+		        <div class="col-xs-6 col-sm-6 col-md-6">
+		          <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
+		        </div>
+		      </div>
+		      <div class="login-or">
+		        <hr class="hr-or">
+		        <span class="span-or">or</span>
+		      </div>
+		
+		      <form role="form" action="efetuaLogin" method="POST">
+		        <div class="form-group">
+		          <label for="inputUsernameEmail">Nome de usuário</label>
+		          <input type="text" name="usuario" class="form-control" id="inputUsernameEmail">
+		        </div>
+		        <div class="form-group">
+		          <a class="pull-right" href="#">Esqueceu a senha?</a>
+		          <label for="inputPassword">Senha</label>
+		          <input type="password" name="senha" class="form-control" id="inputPassword">
+		        </div>
+		        <div class="checkbox pull-right">
+		          <label>
+		            <input type="checkbox">
+		            Lembrar-me </label>
+		        </div>
+		        <button type="submit" class="btn btn btn-primary">
+		          Entrar
+		        </button>
+		      </form>
+		    </div>
+		  </div>
+		</div>	
 	</body>
 </html>

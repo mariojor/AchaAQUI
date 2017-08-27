@@ -16,7 +16,12 @@
   <context:component-scan base-package="br.com.acharfacil" />
   <mvc:annotation-driven />
   <tx:annotation-driven/>
-  <mvc:default-servlet-handler/>
+  
+  <mvc:resources mapping="/resources/**" location="/resources/" />
+  
+   <mvc:interceptors>
+		<bean class="br.com.acharfacil.util.AutorizadorInterceptor" />
+   </mvc:interceptors>
 
   <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
     <property name="prefix" value="/WEB-INF/jsp/"/>
@@ -47,4 +52,5 @@
 	  <property name="entityManagerFactory" ref="entityManagerFactory"/>
 	</bean>
   
+   
 </beans>
