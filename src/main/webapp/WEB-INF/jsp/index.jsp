@@ -18,6 +18,8 @@
 	
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloLogin.css">
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-grid.css">
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-reboot.css">
 		<script src="/AcharFacil/resources/js/bootstrap.js"></script>
 		<script src="/AcharFacil/resources/js/jquery.js"></script>
 		<script src="/AcharFacil/resources/js/scripts.js"></script>
@@ -29,7 +31,7 @@
 		
 		    <div class="main">
 		
-		      <h3>Faça o login, ou <a href="#">Inscrever-se</a></h3>
+		      <h3>Faça o login, ou <a href="#">Inscreva-se</a></h3>
 		      <div class="row">
 		        <div class="col-xs-6 col-sm-6 col-md-6">
 		          <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
@@ -42,16 +44,16 @@
 		        <hr class="hr-or">
 		        <span class="span-or">or</span>
 		      </div>
-		
+			 	<label>${erroLogin}</label>
 		      <form role="form" action="efetuaLogin" method="POST">
 		        <div class="form-group">
-		          <label for="inputUsernameEmail">Nome de usuário</label>
-		          <input type="text" name="usuario" class="form-control" id="inputUsernameEmail">
+		          <label for="usuario">Nome de usuário</label>
+		          <input type="text" name="usuario" class="form-control" id="usuario">
 		        </div>
 		        <div class="form-group">
 		          <a class="pull-right" href="#">Esqueceu a senha?</a>
-		          <label for="inputPassword">Senha</label>
-		          <input type="password" name="senha" class="form-control" id="inputPassword">
+		          <label for="senha">Senha</label>
+		          <input type="password" name="senha" class="form-control" id="senha">
 		        </div>
 		        <div class="checkbox pull-right">
 		          <label>

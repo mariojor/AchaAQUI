@@ -1,6 +1,7 @@
 package br.com.acharfacil.model;
 
 import java.io.Serializable;
+import java.util.Calendar;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -9,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 @Entity
 public class Funcionario implements Serializable {
@@ -31,12 +34,15 @@ public class Funcionario implements Serializable {
 
 	private String sobreVoce;
 
+	@Temporal(TemporalType.DATE)
+	private Calendar dataDeCadastro;
+
 	@OneToOne(cascade = CascadeType.ALL, optional = true)
-	@JoinColumn(name = "endereco_id")
+	@JoinColumn(name = "endereco")
 	private Endereco endereco;
 
 	@OneToOne(cascade = CascadeType.ALL, optional = true)
-	@JoinColumn(name = "login_id")
+	@JoinColumn(name = "login")
 	private Login login;
 
 	public Funcionario() {
@@ -112,6 +118,14 @@ public class Funcionario implements Serializable {
 
 	public void setLogin(Login login) {
 		this.login = login;
+	}
+
+	public Calendar getDataDeCadastro() {
+		return dataDeCadastro;
+	}
+
+	public void setDataDeCadastro(Calendar dataDeCadastro) {
+		this.dataDeCadastro = dataDeCadastro;
 	}
 
 }
