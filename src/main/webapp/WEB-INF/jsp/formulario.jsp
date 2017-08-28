@@ -16,13 +16,13 @@
 	<script src="/AcharFacil/resources/js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloFormularioCadastro.css">
 	<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
+	<script src="/AcharFacil/resources/js/tether.min.js"></script>
 	<script src="/AcharFacil/resources/js/bootstrap.js"></script>
-	<script src="/AcharFacil/resources/js/scriptsFormulario.js"></script>
+	<script src="/AcharFacil/resources/js/scriptsLogin.js"></script>
 </head>
 <body>
 	<div class="container">
-		<form class="well form-horizontal" action="cadastroDeFuncionario"
-			method="post" id="contact_form">
+		<form class="well form-horizontal" action="cadastroDeFuncionario" method="post" id="contact_form">
 			<fieldset>
 
 				<!-- Form Name -->

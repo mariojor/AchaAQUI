@@ -53,7 +53,7 @@ public class CadastroDeFuncionariosController {
 		funcionario.setLogin(lg);
 
 		dao.cadastrar(funcionario);
-		return "sucesso";
+		return "index";
 
 	}
 

@@ -60,6 +60,7 @@
  
  
  function submitForm(){
+	 $("#formCadastro").attr("action","formulario");
 	 $("#formCadastro").submit();
  }
  
