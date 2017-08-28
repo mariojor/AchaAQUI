@@ -22,50 +22,56 @@
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-reboot.css">
 		<script src="/AcharFacil/resources/js/bootstrap.js"></script>
 		<script src="/AcharFacil/resources/js/jquery.js"></script>
-		<script src="/AcharFacil/resources/js/scripts.js"></script>
+		<script src="/AcharFacil/resources/js/scriptsLogin.js"></script>
+		
 		
 	</head>
 	<body>
-		<div class="container">
-		  <div class="row">
-		
-		    <div class="main">
-		
-		      <h3>Faça o login, ou <a href="#">Inscreva-se</a></h3>
-		      <div class="row">
-		        <div class="col-xs-6 col-sm-6 col-md-6">
-		          <a href="#" class="btn btn-lg btn-primary btn-block">Facebook</a>
-		        </div>
-		        <div class="col-xs-6 col-sm-6 col-md-6">
-		          <a href="#" class="btn btn-lg btn-info btn-block">Google</a>
-		        </div>
-		      </div>
-		      <div class="login-or">
-		        <hr class="hr-or">
-		        <span class="span-or">or</span>
-		      </div>
-			 	<label>${erroLogin}</label>
-		      <form role="form" action="efetuaLogin" method="POST">
-		        <div class="form-group">
-		          <label for="usuario">Nome de usuário</label>
-		          <input type="text" name="usuario" class="form-control" id="usuario">
-		        </div>
-		        <div class="form-group">
-		          <a class="pull-right" href="#">Esqueceu a senha?</a>
-		          <label for="senha">Senha</label>
-		          <input type="password" name="senha" class="form-control" id="senha">
-		        </div>
-		        <div class="checkbox pull-right">
-		          <label>
-		            <input type="checkbox">
-		            Lembrar-me </label>
-		        </div>
-		        <button type="submit" class="btn btn btn-primary">
-		          Entrar
-		        </button>
-		      </form>
-		    </div>
-		  </div>
-		</div>	
+	
+	<div class="container">
+	    <div class="row">
+	        <div class="col-md-3 col-md-offset-4">
+	            <div class="account-box">
+	                <div class="logo ">
+	                    <img src="http://placehold.it/90x38/fff/6E329D&text=LOGO" alt=""/>
+	                </div>
+	                <label>${erroLogin}</label>
+	                <form class="form-signin" id="formTeste" action="efetuaLogin" method="POST">
+	                <div class="form-group">
+	                    <input type="text" name="usuario" class="form-control" placeholder="Usuario" required autofocus />
+	                </div>
+	                <div class="form-group">
+	                    <input type="password" name="senha" class="form-control" placeholder="Senha" required />
+	                </div>
+	                <label class="checkbox">
+	                    <input type="checkbox" value="remember-me" />
+	                    Keep me signed in
+	                </label>
+	                <button class="btn btn-lg btn-block purple-bg" type="submit">
+	                    Sign in</button>
+	                </form>
+	                <a class="forgotLnk" href="">I can't access my account</a>
+	                <div class="or-box">
+	                    <span class="or">OR</span>
+	                    <div class="row">
+	                        <div class="col-md-6 row-block">
+	                            <a href="" class="btn btn-facebook btn-block">Facebook</a>
+	                        </div>
+	                        <div class="col-md-6 row-block">
+	                            <a href="" class="btn btn-google btn-block">Google</a>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="or-box row-block">
+	                    <div class="row">
+	                        <div class="col-md-12 row-block">
+	                            <a href="" onclick="submitForm()"  class="btn btn-primary btn-block">Cadastrar-se</a>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
 	</body>
 </html>

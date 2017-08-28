@@ -13,11 +13,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ProjetoPessoal</title>
+	<script src="/AcharFacil/resources/js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloFormularioCadastro.css">
 	<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
 	<script src="/AcharFacil/resources/js/bootstrap.js"></script>
-	<script src="/AcharFacil/resources/js/jquery.js"></script>
-	<script src="/AcharFacil/resources/js/scripts.js"></script>
+	<script src="/AcharFacil/resources/js/scriptsFormulario.js"></script>
 </head>
 <body>
 	<div class="container">
