@@ -14,8 +14,10 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter{
 
 	      String uri = request.getRequestURI();
 	      if(uri.endsWith("show") || 
-	          uri.endsWith("efetuaLogin") || 
-	              uri.contains("resources")||uri.contains("formulario")){
+	         uri.endsWith("efetuaLogin") || 
+	         uri.contains("resources")||
+	         uri.contains("formulario")||
+	         uri.contains("login")){
 	        return true;
 	      }
 	      
@@ -23,7 +25,7 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter{
 	        return true;
 	      }
 	      
-	      response.sendRedirect("index");
+	      response.sendRedirect("show");
 	      return false;
 	  }
 	 

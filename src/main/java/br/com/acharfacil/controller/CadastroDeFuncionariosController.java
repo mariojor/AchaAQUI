@@ -25,7 +25,7 @@ public class CadastroDeFuncionariosController {
 
 	@RequestMapping("/show")
 	public String show() {
-		return "index";
+		return "login";
 
 	}
 
@@ -53,7 +53,7 @@ public class CadastroDeFuncionariosController {
 		funcionario.setLogin(lg);
 
 		dao.cadastrar(funcionario);
-		return "index";
+		return "login";
 
 	}
 
@@ -73,7 +73,7 @@ public class CadastroDeFuncionariosController {
 			session.setAttribute("erroLogin", "Erro ao realizar o login");
 		}
 		// ele errou a senha, voltou para o formulario
-		return "index";
+		return "login";
 	}
 
 }
