@@ -17,7 +17,8 @@ public class AutorizadorInterceptor extends HandlerInterceptorAdapter{
 	         uri.endsWith("efetuaLogin") || 
 	         uri.contains("resources")||
 	         uri.contains("formulario")||
-	         uri.contains("login")){
+	         uri.contains("login")||
+	         uri.contains("cadastroDeFuncionario")){
 	        return true;
 	      }
 	      
