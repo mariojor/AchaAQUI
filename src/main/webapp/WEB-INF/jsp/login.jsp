@@ -17,7 +17,7 @@
 		<title>ProjetoPessoal</title>
 	
 		<script src="/AcharFacil/resources/js/jquery.js"></script>
-		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloLogin.css">
+<!-- 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloLogin.css"> -->
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-grid.css">
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-reboot.css">
