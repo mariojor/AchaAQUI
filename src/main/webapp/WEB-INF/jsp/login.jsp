@@ -32,7 +32,7 @@
 	<div class="container">
 	    <div class="row">
 	        <div class="col-md-3 col-md-offset-4">
-	            <div class="account-box">
+<!-- 	            <div class="account-box"> -->
 	                <div class="logo ">
 	                    <img src="http://placehold.it/90x38/fff/6E329D&text=LOGO" alt=""/>
 	                </div>
@@ -46,14 +46,14 @@
 		                </div>
 		                <label class="checkbox">
 		                    <input type="checkbox" value="remember-me" />
-		                    Keep me signed in
+		                    Mantenha-me conectado
 		                </label>
 		                <button class="btn btn-lg btn-block purple-bg" type="submit">
-		                    Sign in</button>
+		                    Entrar</button>
 	                </form>
-	                <a class="forgotLnk" href="">I can't access my account</a>
+	                <a class="forgotLnk" href="">Não consigo acessar minha conta</a>
 	                <div class="or-box">
-	                    <span class="or">OR</span>
+	                    <span class="or">OU</span>
 	                    <div class="row">
 	                        <div class="col-md-6 row-block">
 	                            <a href="" class="btn btn-facebook btn-block">Facebook</a>
@@ -73,6 +73,6 @@
 	            </div>
 	        </div>
 	    </div>
-	</div>
+<!-- 	</div> -->
 	</body>
 </html>
