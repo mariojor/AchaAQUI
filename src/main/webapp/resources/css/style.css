@@ -1,20 +1,28 @@
+#wiew-login {
+	background-image: url("../img/crianca2.jpg");
+	background-size: 100% 130%;
+	background-repeat: no-repeat;
+}
 
-#wiew-login  .forgotLink
-{
+#wiew-login .titulo-login{
+	font-family: fantasy;
+	font-size: 3rem;
+	color: #fff;
+}
+
+#wiew-login  .forgotLink{
 	font-size: 0.6rem;
 	margin-top: 10px;
 	display: block;
 }
 
-#wiew-login .or-box
-{
+#wiew-login .or-box{
     position: relative;
     border-top: 1px solid #dfdfdf;
     padding-top: 9px;
     margin-top: 8px;
 }
-#wiew-login .or
-{
+#wiew-login .or {
     color: #666666;
     background-color: #ffffff;
     position: absolute;
@@ -22,6 +30,12 @@
     top: -8px;
     width: 40px;
     left: 90px;
+}
+
+#wiew-login .ou-color{
+	color: white;
+	font-style: italic;
+	font-family: inherit;
 }
 
 #wiew-login .btn-facebook
@@ -39,15 +53,15 @@
 
 #wiew-login .btn-cadastrar
 {
-    background-color: #42f4a4;
-    color: #fff;
+    background-color: #ff7baf;
+    color: #ffd0e2;
     font-weight:bold;
 }
 
 #wiew-login .btn-entrar{
-	background-color: #4a148c;
-    color: #fff;
-    font-weight:bold;
+	background-color: #fe5195;
+	color: #ffd0e2;
+	font-weight:bold;
 }
 
 #wiew-login .text-alinhar-centro{
@@ -58,6 +72,21 @@
 	font-size: 0.6rem;
 	margin-top: 10px;
 	display: block;
-	position: relative;	
+	position: relative;
 	top:-0.4rem;
+	color: white;
 }
+
+#wiew-login .erro-login{
+	font-size: 0.5rem;
+}
+#wiew-login .logo{
+	height: 10%;
+	margin-top: 7%;
+	margin-bottom: 6%;
+	text-align: center;
+	background-color: #ff7baf;
+	border-radius: 10px;
+}
+
+.ou

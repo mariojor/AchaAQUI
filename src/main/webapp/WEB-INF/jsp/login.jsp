@@ -22,8 +22,8 @@
 	href="/AcharFacil/resources/css/style.css">
 <link rel="stylesheet" type="text/css"
 	href="/AcharFacil/resources/css/bootstrap.css">
-<link rel="stylesheet" type="text/css"
-	href="/AcharFacil/resources/css/bootstrap-grid.css">
+<!-- <link rel="stylesheet" type="text/css" -->
+<!-- 	href="/AcharFacil/resources/css/bootstrap-grid.css"> -->
 <link rel="stylesheet" type="text/css"
 	href="/AcharFacil/resources/css/bootstrap-reboot.css">
 <script src="/AcharFacil/resources/js/tether.min.js"></script>
@@ -32,19 +32,18 @@
 
 
 </head>
-<body>
-
-	<div id="wiew-login" class="container">
+<body id="wiew-login">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="logo ">
-					<img src="http://placehold.it/90x38/fff/6E329D&text=LOGO" alt="" />
+					<h1><span class="titulo-login">SOS - Babá</span></h1>
 				</div>
-				<label>${erroLogin}</label>
+				<label class=" erro-login badge badge-danger">${erroLogin}</label>
 				<form class="form-signin" id="formTeste" action="efetuaLogin"
 					method="POST">
 					<div class="input-group">
-<!-- 						<div class="input-group-addon">@</div> -->
+						<!-- 						<div class="input-group-addon">@</div> -->
 						<input type="text" name="usuario" class="form-control"
 							placeholder="Usuario" required autofocus />
 					</div>
@@ -53,20 +52,18 @@
 							placeholder="Senha" required />
 					</div>
 					<label class="custom-control custom-checkbox"> <input
-						type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> 
-						<span class="custom-control-description text-conectado">Mantenha-me conectado</span>
+						type="checkbox" class="custom-control-input"> <span
+						class="custom-control-indicator"></span> <span
+						class="custom-control-description text-conectado">Mantenha-me
+							conectado</span>
 					</label>
 					<button class="btn btn-lg btn-entrar btn-block" type="submit">Entrar</button>
 				</form>
 
 				<a class="forgotLink" href="">Não consigo acessar minha conta</a>
 				<div class="or-box row-block text-alinhar-centro">
-					<span>OU</span>
+					<span class="ou-color">OU</span>
 				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
 				<div class="or-box row-block">
 					<div class="row">
 						<div class="col-md-6 row-block">

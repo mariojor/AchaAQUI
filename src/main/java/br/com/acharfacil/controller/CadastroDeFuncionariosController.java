@@ -15,6 +15,7 @@ import br.com.acharfacil.dao.CadastroDAOInterface;
 import br.com.acharfacil.model.Endereco;
 import br.com.acharfacil.model.Funcionario;
 import br.com.acharfacil.model.Login;
+import br.com.acharfacil.util.TextoDaAplicacao;
 
 @Controller
 @Transactional
@@ -70,7 +71,7 @@ public class CadastroDeFuncionariosController {
 			}
 			
 		} catch (NoResultException e) {
-			session.setAttribute("erroLogin", "Erro ao realizar o login");
+			session.setAttribute("erroLogin", TextoDaAplicacao.MSG_ERRO_LOGIN);
 		}
 		// ele errou a senha, voltou para o formulario
 		return "login";

@@ -38,7 +38,7 @@
 							<div class="input-group">
 								<span class="input-group-addon"> <i
 									class="glyphicon glyphicon-envelope"></i>
-								</span> <input name="email" placeholder="E-Mail" class="form-control"
+								</span> <input name="usuario" placeholder="E-Mail" class="form-control"
 									type="text">
 							</div>
 						</div>
