@@ -17,6 +17,15 @@ public class Login implements Serializable {
 	private int idLogin;
 	private String usuario;
 	private String senha;
+//	private String token;
+//
+//	public String getToken() {
+//		return token;
+//	}
+//
+//	public void setToken(String token) {
+//		this.token = token;
+//	}
 
 	public int getIdLogin() {
 		return idLogin;
