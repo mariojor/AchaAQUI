@@ -20,8 +20,9 @@
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/normalize.css">
 		<script src="/AcharFacil/resources/js/jquery.js"></script>
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/style.css">
-		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
-		<script src="/AcharFacil/resources/js/bootstrap.js"></script>
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.min.css">
+		<script src="/AcharFacil/resources/js/tether.min.js"></script>
+		<script src="/AcharFacil/resources/js/bootstrap.min.js"></script>
 		<script src="/AcharFacil/resources/js/scripts.js"></script>
 	
 	</head>

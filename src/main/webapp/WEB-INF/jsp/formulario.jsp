@@ -20,6 +20,7 @@
 		<script src="/AcharFacil/resources/js/jquery.js"></script>
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/style.css">
 		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.min.css">
+		<script src="/AcharFacil/resources/js/tether.min.js"></script>
 		<script src="/AcharFacil/resources/js/bootstrap.min.js"></script>
 		<script src="/AcharFacil/resources/js/scripts.js"></script>
 	</head>
@@ -27,24 +28,23 @@
 	<div id="wiew-formulario-cadastro">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="titulo-inicial">
-							<h1><span class="titulo-cadastro">Cadastro</span></h1>
+				<div class="col-md-12">
+					<div class="titulo-inicial">
+						<h1><span class="titulo-cadastro">Cadastro</span></h1>
+					</div>
+				
+					<form class="form-signin" action="cadastroDeFuncionario" method="post">
+						<div class="form-group">
+							<input name="usuario" placeholder="E-Mail" class="form-control" type="text" required autofocus>
 						</div>
+						<div class="form-group">
+							<input name="senha" placeholder="Senha" class="form-control" type="password" required>
+						</div>
+						<div class="form-group">
+							<input name="repetirSenha" placeholder="Repetir senha" class="form-control" type="password" required>
+						</div>
+					</form>
 					
-						<form class="form-signin" action="cadastroDeFuncionario" method="post">
-							<div class="form-group">
-								<input name="usuario" placeholder="E-Mail" class="form-control" type="text" required autofocus>
-							</div>
-							<div class="form-group">
-								<input name="senha" placeholder="Senha" class="form-control" type="password" required>
-							</div>
-							<div class="form-group">
-								<input name="repetirSenha" placeholder="Repetir senha" class="form-control" type="password" required>
-							</div>
-						</form>
-				</div>
-				<div class="col-md-1">
 					<div class="or-box row-block">
 						<div class="row">
 							<div class="col row-block">
@@ -53,6 +53,7 @@
 						</div>
 					</div>
 				</div>
+				
 				<div class="col-md-1">
 					<div id="accordion" role="tablist" aria-multiselectable="false">
 					  <div class="card">

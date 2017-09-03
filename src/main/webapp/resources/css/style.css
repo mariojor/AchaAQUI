@@ -1,3 +1,31 @@
+/* Import fons */
+@font-face {
+   font-family: Roboto-Bold;
+   src: url(../fonts/roboto/Roboto-Bold.woff);
+}
+
+@font-face {
+   font-family: Roboto-Light;
+   src: url(../fonts/roboto/Roboto-Light.woff);
+}
+
+@font-face {
+   font-family: Roboto-Medium;
+   src: url(../fonts/roboto/Roboto-Medium.woff);
+}
+
+@font-face {
+   font-family: Roboto-Regular;
+   src: url(../fonts/roboto/Roboto-Regular.woff);
+}
+
+@font-face {
+   font-family: Roboto-Thin;
+   src: url(../fonts/roboto/Roboto-Thin.woff);
+}
+
+
+/* CSS Login*/
 #wiew-login {
 	background-image: url("../img/crianca2.jpg");
 	background-size: 100% 135%;
@@ -5,7 +33,7 @@
 }
 
 #wiew-login .titulo-login{
-	font-family: sans-serif;
+	font-family: Roboto-Bold;
 	font-size: 2.5rem;
 	font-weight: bold;
 	color: #fff;
@@ -36,7 +64,7 @@
 #wiew-login .ou-color{
 	color: white;
 	font-style: italic;
-	font-family: inherit;
+	font-family: Roboto-Regular;
 }
 
 #wiew-login .btn-facebook
@@ -82,8 +110,9 @@
 	font-size: 0.5rem;
 }
 #wiew-login .titulo-inicial{
-	height: 10%;
-	margin-top: 7%;
+	margin-top: 12%;
+	padding-bottom: 3%;
+	padding-top: 3%;
 	margin-bottom: 6%;
 	text-align: center;
 	background-color: #ff7baf;
@@ -109,9 +138,10 @@
 }
 
 #wiew-formulario-cadastro .titulo-inicial{
-	height: 19%;
-	margin-top: 7%;
+	margin-top: 12%;
 	margin-bottom: 6%;
+	padding-top: 3%;
+	padding-bottom: 3%;
 	text-align: center;
 	background-color: #ff7baf;
 	border-radius: 30px;

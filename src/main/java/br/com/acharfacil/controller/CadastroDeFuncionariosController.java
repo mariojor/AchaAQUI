@@ -37,21 +37,15 @@ public class CadastroDeFuncionariosController {
 	}
 
 	@RequestMapping("/cadastroDeFuncionario")
-	public String cadastroDeFuncionario(Model mv, Funcionario funcionario, Endereco endereco, Login login) {
+	public String cadastroDeFuncionario(Login login) {
 
-		Endereco end = new Endereco();
-		end.setCidade(endereco.getCidade());
-		end.setCodigoPostal(endereco.getCodigoPostal());
-
-		Login lg = new Login();
-		lg.setSenha(login.getSenha());
-		lg.setUsuario(login.getUsuario());
 		
+		Funcionario funcionario = new Funcionario();
+
 		Calendar dataDeCadastro = Calendar.getInstance();
 		funcionario.setDataDeCadastro(dataDeCadastro);
 		
-		funcionario.setEndereco(end);
-		funcionario.setLogin(lg);
+		funcionario.setLogin(login);
 
 		dao.cadastrar(funcionario);
 		return "login";
