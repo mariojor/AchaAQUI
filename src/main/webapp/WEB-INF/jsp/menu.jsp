@@ -1,3 +1,5 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page language="java" import="java.util.*"%>
@@ -7,25 +9,23 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ProjetoPessoal</title>
-
-
+	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>SOS Babá</title>
+		
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/normalize.css">
 		<script src="/AcharFacil/resources/js/jquery.js"></script>
-		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/estiloMenu.css">
-		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-grid.css">
-		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap-reboot.css">
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/AcharFacil/resources/css/bootstrap.min.css">
 		<script src="/AcharFacil/resources/js/tether.min.js"></script>
-		<script src="/AcharFacil/resources/js/bootstrap.js"></script>
-		<script src="/AcharFacil/resources/js/scriptMenu.js"></script>
-
-</head>
+		<script src="/AcharFacil/resources/js/bootstrap.min.js"></script>
+		<script src="/AcharFacil/resources/js/scripts.js"></script>
+	
+	</head>
 
 <script>
 $(document).ready(function() {
