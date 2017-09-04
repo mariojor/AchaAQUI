@@ -51,7 +51,7 @@ public class CadastroDeFuncionariosController {
 			return "login";
 		}
 
-		md.addAttribute("Email","teste");
+		md.addAttribute("emailErradoOuSenha","Email ou senha invalidos, senhas devem conter no minimo 6 caracteres");
 		
 		return "formulario";
 

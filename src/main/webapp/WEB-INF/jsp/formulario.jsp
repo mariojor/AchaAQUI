@@ -24,6 +24,14 @@
 		<script src="/AcharFacil/resources/js/tether.min.js"></script>
 		<script src="/AcharFacil/resources/js/bootstrap.min.js"></script>
 		<script src="/AcharFacil/resources/js/scripts.js"></script>
+		
+		<script>
+			$( document ).ready(function() {
+			   $("#senhasDiferentes").hide();
+			});
+		</script>
+		
+		
 	</head>
 <body>
 	<div id="wiew-formulario-cadastro">
@@ -34,18 +42,26 @@
 						<h1><span class="titulo-cadastro">Cadastro</span></h1>
 					</div>
 				
-					<form class="form-signin" action="cadastroDeFuncionario" method="post">
+					<c:if test="${not empty emailErradoOuSenha}">
+						<div id="senhasDiferentes" class="alert alert-warning alert-dismissible fade show" role="alert">
+						  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						    <span aria-hidden="true">&times;</span>
+						  </button>
+						  <strong>Erro!!!</strong> <span id="textoDeErro">senhas devem ser iguais.</span>
+						</div>
+					</c:if>	
+					<form id="form-cadastro" class="form-signin" action="cadastroDeFuncionario" method="post">
 						<div class="form-group">
 							<input name="usuario" placeholder="E-Mail" class="form-control" type="text" required autofocus>
 						</div>
 						<div class="form-group">
-							<input name="senha" placeholder="Senha" class="form-control" type="password" required>
+							<input id="ip-senha" name="senha" placeholder="Senha" class="form-control" type="password" required>
 						</div>
 						<div class="form-group">
-							<input  placeholder="Repetir senha" class="form-control" type="password" required>
+							<input id="ip-rsenha" placeholder="Repetir senha" class="form-control" type="password" required>
 						</div>
 
-						<button class="btn btn-lg btn-entrar btn-block" type="submit">Confirmar</button>
+						<button class="btn btn-lg btn-entrar btn-block" type="button" onclick="validarSenha()">Confirmar</button>
 					</form>
 				</div>
 				
