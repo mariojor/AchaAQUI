@@ -66,7 +66,7 @@ public class CadastroDeFuncionariosController {
 			if (funcionario != null) {
 				// usuario existe, guardaremos ele na session
 				session.setAttribute("usuarioLogado", funcionario);
-				return "menu";
+				return "perfil";
 			}
 			
 		} catch (NoResultException e) {
