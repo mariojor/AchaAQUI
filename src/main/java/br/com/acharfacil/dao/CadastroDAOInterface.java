@@ -7,7 +7,7 @@ import br.com.acharfacil.model.Login;
 
 public interface CadastroDAOInterface {
 
-	void cadastrar(Funcionario funcionario);
+	String cadastrar(Funcionario funcionario);
 
 	Funcionario existeUsuario(Login login)  throws NoResultException;
 	

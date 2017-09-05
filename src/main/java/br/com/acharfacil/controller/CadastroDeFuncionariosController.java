@@ -6,6 +6,7 @@ import javax.persistence.NoResultException;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -47,8 +48,18 @@ public class CadastroDeFuncionariosController {
 			
 			funcionario.setLogin(login);
 			
-			dao.cadastrar(funcionario);
-			return "login";
+			String retornoCadastro = dao.cadastrar(funcionario);
+			
+			
+			if(StringUtils.isNotBlank(retornoCadastro) && retornoCadastro.equals(TextoDaAplicacao.MSG_CADASTRO_SUCESSO)) {
+				md.addAttribute("cadastroSucesso",retornoCadastro );
+				return "login";
+			}
+//			else if() {
+//				
+//			}
+			
+			
 		}
 
 		md.addAttribute("emailErradoOuSenha","Email ou senha invalidos, senhas devem conter no minimo 6 caracteres");
