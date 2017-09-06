@@ -6,7 +6,6 @@ import javax.persistence.NoResultException;
 import javax.servlet.http.HttpSession;
 import javax.transaction.Transactional;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -51,21 +50,24 @@ public class CadastroDeFuncionariosController {
 
 			} catch (NoResultException e) {
 
-				Funcionario funcionario = new Funcionario();
-				Calendar dataDeCadastro = Calendar.getInstance();
-				funcionario.setDataDeCadastro(dataDeCadastro);
-
-				funcionario.setLogin(login);
-
-				dao.cadastrar(funcionario);
-
-				md.addAttribute("cadastroSucesso", TextoDaAplicacao.MSG_CADASTRO_SUCESSO);
-				return "login";
+				if(Validacao.isValidateEmail(login.getUsuario()) && Validacao.quantidadeDeCaracteresSenha(login.getSenha()) ) {
+				
+					Funcionario funcionario = new Funcionario();
+					Calendar dataDeCadastro = Calendar.getInstance();
+					funcionario.setDataDeCadastro(dataDeCadastro);
+	
+					funcionario.setLogin(login);
+	
+					dao.cadastrar(funcionario);
+	
+					md.addAttribute("cadastroSucesso", TextoDaAplicacao.MSG_CADASTRO_SUCESSO);
+					return "login";
+				}	
 
 			}
+		}else {
+			md.addAttribute("emailErradoOuSenha", TextoDaAplicacao.MSG_CADASTRO_EMAIL_SENHA_INVALIDOS);
 		}
-
-		md.addAttribute("emailErradoOuSenha", "Email ou senha invalidos, senhas devem conter no minimo 6 caracteres");
 
 		return "formulario";
 

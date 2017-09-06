@@ -35,6 +35,7 @@
 						<h1><span class="titulo-cadastro">Cadastro</span></h1>
 					</div>
 					
+					<span class="badge badge-pill badge-danger">${emailErradoOuSenha}</span>
 					<span class="badge badge-pill badge-danger">${cadastroExiste}</span>
 					<form id="form-cadastro" class="form-signin" action="cadastroDeFuncionario" method="post">
 						<div class="form-group">

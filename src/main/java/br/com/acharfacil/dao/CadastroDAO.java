@@ -9,7 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import br.com.acharfacil.model.Funcionario;
 import br.com.acharfacil.model.Login;
-import br.com.acharfacil.util.TextoDaAplicacao;
 
 @Repository
 public class CadastroDAO implements CadastroDAOInterface {
