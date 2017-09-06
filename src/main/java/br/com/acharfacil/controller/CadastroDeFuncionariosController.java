@@ -38,31 +38,35 @@ public class CadastroDeFuncionariosController {
 	}
 
 	@RequestMapping("/cadastroDeFuncionario")
-	public String cadastroDeFuncionario(Model md , Login login) {
+	public String cadastroDeFuncionario(Model md, Login login) {
 
-		if(Validacao.isValidateEmail(login.getUsuario()) && Validacao.quantidadeDeCaracteresSenha(login.getSenha()) ) {
+		if (Validacao.isValidateEmail(login.getUsuario()) && Validacao.quantidadeDeCaracteresSenha(login.getSenha())) {
 
-			if(dao.existeUsuario(login) == null) {
-				
+			try {
+
+				Funcionario funcionarioEncontrado = dao.existeUsuario(login);
+
+				md.addAttribute("cadastroExiste", TextoDaAplicacao.MSG_CADASTRO_JA_EXISTE);
+				return "formulario";
+
+			} catch (NoResultException e) {
+
 				Funcionario funcionario = new Funcionario();
 				Calendar dataDeCadastro = Calendar.getInstance();
 				funcionario.setDataDeCadastro(dataDeCadastro);
-				
+
 				funcionario.setLogin(login);
-				
+
 				dao.cadastrar(funcionario);
-				
+
 				md.addAttribute("cadastroSucesso", TextoDaAplicacao.MSG_CADASTRO_SUCESSO);
 				return "login";
+
 			}
-			
-			md.addAttribute("cadastroExiste", TextoDaAplicacao.MSG_CADASTRO_JA_EXISTE);
-			return "formulario";
-			
 		}
 
-		md.addAttribute("emailErradoOuSenha","Email ou senha invalidos, senhas devem conter no minimo 6 caracteres");
-		
+		md.addAttribute("emailErradoOuSenha", "Email ou senha invalidos, senhas devem conter no minimo 6 caracteres");
+
 		return "formulario";
 
 	}
@@ -78,7 +82,7 @@ public class CadastroDeFuncionariosController {
 				session.setAttribute("usuarioLogado", funcionario);
 				return "perfil";
 			}
-			
+
 		} catch (NoResultException e) {
 			session.setAttribute("erroLogin", TextoDaAplicacao.MSG_ERRO_LOGIN);
 		}
