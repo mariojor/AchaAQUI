@@ -42,23 +42,22 @@ public class CadastroDeFuncionariosController {
 
 		if(Validacao.isValidateEmail(login.getUsuario()) && Validacao.quantidadeDeCaracteresSenha(login.getSenha()) ) {
 
-			Funcionario funcionario = new Funcionario();
-			Calendar dataDeCadastro = Calendar.getInstance();
-			funcionario.setDataDeCadastro(dataDeCadastro);
-			
-			funcionario.setLogin(login);
-			
-			String retornoCadastro = dao.cadastrar(funcionario);
-			
-			
-			if(StringUtils.isNotBlank(retornoCadastro) && retornoCadastro.equals(TextoDaAplicacao.MSG_CADASTRO_SUCESSO)) {
-				md.addAttribute("cadastroSucesso",retornoCadastro );
+			if(dao.existeUsuario(login) == null) {
+				
+				Funcionario funcionario = new Funcionario();
+				Calendar dataDeCadastro = Calendar.getInstance();
+				funcionario.setDataDeCadastro(dataDeCadastro);
+				
+				funcionario.setLogin(login);
+				
+				dao.cadastrar(funcionario);
+				
+				md.addAttribute("cadastroSucesso", TextoDaAplicacao.MSG_CADASTRO_SUCESSO);
 				return "login";
 			}
-//			else if() {
-//				
-//			}
 			
+			md.addAttribute("cadastroExiste", TextoDaAplicacao.MSG_CADASTRO_JA_EXISTE);
+			return "formulario";
 			
 		}
 

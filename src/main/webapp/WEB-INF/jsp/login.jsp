@@ -33,7 +33,8 @@
 					<div class="titulo-inicial">
 						<h1><span class="titulo-login">SOS - Babá</span></h1>
 					</div>
-					<label class=" erro-login badge badge-danger">${erroLogin}</label>
+					<span class="badge badge-pill badge-success">${cadastroSucesso}</span>
+					<span class="badge badge-pill badge-danger">${erroLogin}</span>
 					<form class="form-signin" action="efetuaLogin" method="POST"> 
 					
 						<div class="input-group">

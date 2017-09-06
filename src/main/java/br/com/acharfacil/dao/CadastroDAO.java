@@ -17,18 +17,8 @@ public class CadastroDAO implements CadastroDAOInterface {
 	@PersistenceContext
 	private EntityManager manager;
 
-	public String cadastrar(Funcionario funcionario) {
-		try {
-			if (existeUsuario(funcionario.getLogin()) != null) {
-				manager.persist(funcionario);
-				return TextoDaAplicacao.MSG_CADASTRO_SUCESSO;
-			}
-			
-		}catch (Exception e) {
-			return TextoDaAplicacao.MSG_CADASTRO_ERRO;
-		}
-		
-		return TextoDaAplicacao.MSG_CADASTRO_JA_EXISTE;
+	public void cadastrar(Funcionario funcionario) {
+		manager.persist(funcionario);
 	}
 
 	@Override
